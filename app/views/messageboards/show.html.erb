@@ -1,8 +1,4 @@
-<div width="100%"   style="height: 30px;background-color:black;padding-top:10px;padding-left:50px" >
-	<span style="color:grey;">kadal</span>
-</div>
 
-<div style="padding-left:50px;padding-top:15px;">
 	<h1>Editing MessageBoard &nbsp; <%= @messageboard.id %></h1>
 	<p id="notice"><%= notice %></p>
 
@@ -20,15 +16,15 @@
 	<h1>Comments</h1>  
 	  
 	<% @messageboard.comments.each do |comment| %>  
-	  <span><%= comment.text %></span>  
-	  <span><%= link_to "Destory", [@messageboard, comment], :method => :delete, :confirm => "Are you sure?" %></span>  
+	  <span><%= comment.text %></span>
+	  <span><%= link_to "Destory", [@messageboard, comment], :method => :delete, :confirm => "Are you sure?",:class=>'btn btn-danger' %> </span>  </br>
 	<% end %>  
 	  
 	<%= form_for [@messageboard,@messageboard.comments.build] do |f| %>  
 	  <p><%= f.text_area :text, :size => '40x10' %> </p>  
-	  <p><%= f.submit "Add Comment" %> </p>  
+	  <p><%= f.submit "Add Comment",:class=>'btn btn-primary' %> </p>
 	<% end %>  
 
 	<%= link_to 'Edit', edit_messageboard_path(@messageboard) %> |
 	<%= link_to 'Back', messageboards_path %>
-</div>
+
