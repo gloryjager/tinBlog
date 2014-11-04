@@ -1,31 +1,29 @@
 <%= form_for(@messageboard) do |f| %>
-    <% if @messageboard.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@messageboard.errors.count, "error") %> prohibited this messageboard from being saved:</h2>
+  <% if @messageboard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@messageboard.errors.count, "error") %> prohibited this messageboard from being saved:</h2>
 
-          <ul>
-            <% @messageboard.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :title %><br>
-      <%= f.text_field :title %>
+      <ul>
+      <% @messageboard.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
-    <div class="field">
-      <%= f.label :body %><br>
-      <%= f.text_area :body %>
-    </div>
+  <% end %>
 
-    <div class="field" style="display: none">
-      <%= f.label :createdat %><br>
-      <%= f.datetime_select :createdat %>
-    </div>
-
-
-    <%= f.submit :class=>'btn btn-primary' %>
-
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :createdat %><br>
+    <%= f.datetime_select :createdat %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

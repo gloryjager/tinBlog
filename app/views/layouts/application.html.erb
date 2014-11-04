@@ -5,19 +5,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <style type="text/css">
-    
-  </style>
 </head>
 <body>
-<div width="100%"   style="height: 40px;background-color:black;padding-top:10px;padding-left:50px" >
-  <span style="color:grey;">kadal</span>
-</div>
 
-<div style="padding-left:50px;padding-top:15px;">
-    <%= yield %>
-  <div>&copy;Kadal 2014</div>
-</div>
+<%= yield %>
 
 </body>
 </html>

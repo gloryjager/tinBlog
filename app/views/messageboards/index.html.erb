@@ -1,10 +1,14 @@
+<div width="100%"   style="height: 30px;background-color:black;padding-top:10px;padding-left:50px" >
+	<span style="color:grey;">kadal</span>
+</div>
 
+<div style="padding-left:50px;padding-top:15px;">
 	<div style="padding-bottom:15px;">
 		<span  style="font-size:23px;font-weight: bold;">Listing MessageBoards</span>
-		<%= link_to 'New', new_messageboard_path ,class: 'btn'%>
+		<%= link_to 'New', new_messageboard_path %>
 	</div>
 
-	<table border="1px" class="table table-bordered"  >
+	<table border="1px"  >
 	  <thead>
 		<tr>
 		  <th>Title</th>
@@ -20,14 +24,14 @@
 			<td><%= messageboard.title %></td>
 			<td><%= messageboard.body %></td>
 			<td><%= messageboard.createdat %></td>
-			<td><%= link_to 'Show', messageboard,:class=>'btn' %></td>
-			<td><%= link_to 'Edit', edit_messageboard_path(messageboard),:class=>'btn' %></td>
-			<td><%= link_to 'Destroy' ,  messageboard, method: :delete, data: { confirm: 'Are you sure?' },:class=>'btn btn-danger' %></td>
+			<td><%= link_to 'Show', messageboard %></td>
+			<td><%= link_to 'Edit', edit_messageboard_path(messageboard) %></td>
+			<td><%= link_to 'Destroy', messageboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		  </tr>
 		<% end %>
 	  </tbody>
 	</table>
 
-
+</div>
 
 
