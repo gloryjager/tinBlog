@@ -28,6 +28,7 @@ Rails.application.configure do
   config.assets.debug = true
   
   config.assets.compile = true
+  config.assets.initialize_on_precompile=false
 
   # Adds additional error checking when serving assets at runtime.
   # Checks for improperly declared sprockets dependencies.
