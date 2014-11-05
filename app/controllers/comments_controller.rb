@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
    def create  
 	params.permit! 
     @messageboard = Messageboard.find(params[:messageboard_id])  
